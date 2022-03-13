@@ -1,13 +1,14 @@
 package commands;
 
 import data.SpaceMarine;
+import utilities.Decoder;
 
 import java.util.LinkedList;
 
 public class Info extends CommandAbstract{
     public Info() {
         name = "info";
-        help = "выводит в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)";
+        help = "выводит информацию о коллекции";
     }
 
     @Override
@@ -16,7 +17,7 @@ public class Info extends CommandAbstract{
         else {
             System.out.println("Тип коллекции: " + list.getClass().getName());
             System.out.println("Время создания коллекции: " + "");
-            System.out.println("Количество элементов в коллеции: " + list.size());
+            System.out.println("Количество элементов в коллеции: " + Decoder.list.size());
         }
     }
 }

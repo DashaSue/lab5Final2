@@ -9,7 +9,7 @@ import java.util.LinkedList;
 public class Show extends CommandAbstract{
     public Show() {
         name = "show";
-        help = "выводит в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов и т.д.)";
+        help = "выводит информацию об объектах коллекции";
     }
 
 
