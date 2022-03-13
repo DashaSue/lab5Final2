@@ -15,6 +15,8 @@ public class CommandManager {
         commands.add(new Help());
         commands.add(new Info());
         commands.add(new ExecuteScript());
+        commands.add(new Clear());
+        commands.add(new Show());
     }
     public static HashSet<CommandAbstract> getCommands() {
         return commands;

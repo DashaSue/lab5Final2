@@ -15,7 +15,7 @@ public class Info extends CommandAbstract{
         if (args.length > 0) System.out.println("Команда не принимает аргументы");
         else {
             System.out.println("Тип коллекции: " + list.getClass().getName());
-            System.out.println("Время создания коллекции: " + "");//Main.creationDate);
+            System.out.println("Время создания коллекции: " + "");
             System.out.println("Количество элементов в коллеции: " + list.size());
         }
     }

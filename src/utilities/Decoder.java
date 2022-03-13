@@ -1,7 +1,6 @@
 package utilities;
 
-import data.Coordinates;
-import data.SpaceMarine;
+import data.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -40,6 +39,11 @@ public class Decoder {
                     coordinates.setX(Double.parseDouble(columnList.get(2)));
                     coordinates.setY(Long.parseLong(columnList.get(3)));
                     marine.coordinates = coordinates;
+                    marine.health = Long.parseLong(columnList.get(4));
+                    marine.achievements = columnList.get(5);
+                    marine.category = AstartesCategory.valueOf(columnList.get(6).toUpperCase());
+                    marine.weaponType = Weapon.valueOf(columnList.get(7).toUpperCase());
+
 
                     list.add(marine);
                     //
