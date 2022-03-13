@@ -7,7 +7,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-
 public class Decoder {
 
     public static List<SpaceMarine> list;
@@ -46,7 +45,6 @@ public class Decoder {
 
 
                     list.add(marine);
-                    //
                 }
                 System.out.println("Коллекция успешно заполнена.");
             } catch (IOException e) {
