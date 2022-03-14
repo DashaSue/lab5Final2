@@ -15,6 +15,7 @@ public class Decoder {
     public static List<SpaceMarine> list;
     private static final String envPath = System.getenv("file");
 
+
     public static void fillCollection(String args){
         if (args == null)
             System.out.println("Указанный файл не найден. Коллекция пустая.");

@@ -28,7 +28,7 @@ public class Chapter {
         if (parentLegion != null)
             this.parentLegion = parentLegion;
     }
-    public String getParentLegion(String parentLegion) {
+    public String getParentLegion() {
         return parentLegion;
     }
     public void setMarinesCount(Long marinesCount){
@@ -38,4 +38,5 @@ public class Chapter {
     public long getMarinesCount() {
         return marinesCount;
     }
+
 }

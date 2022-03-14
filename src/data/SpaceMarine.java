@@ -100,13 +100,16 @@ public class SpaceMarine {
             this.chapter = chapter;
         else throw new NullPointerException();
     }
+    public Chapter getChapter() {
+        return chapter;
+    }
 
     @Override
     public String toString() {
         return "Космический корабль{ " +
                 "id: " + id +
                 ", имя: '" + name + '\'' +
-                ", " + "коодинаты: x = "+coordinates.getX() + ", y = "+coordinates.getY()+ ", "+
+                ", " + "коодинаты: x = "+coordinates.getX() + ", y = "+coordinates.getY()+
                 ", дата создания: " + creationDate +
                 ", здоровье: " + health +
                 ", достижения: " + achievements +
@@ -115,5 +118,6 @@ public class SpaceMarine {
                 ", " + chapter +
                 "}\n";
     }
+
 }
 
