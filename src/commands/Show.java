@@ -16,7 +16,7 @@ public class Show extends CommandAbstract{
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
         if (Decoder.list.size() == 0) {
-            System.out.println("Команда не принимает аргументы");
+            System.out.println("Коллекция пуста");
         } else System.out.println(Arrays.toString(Decoder.list.toArray()));
     }
 }
