@@ -51,7 +51,7 @@ public class Decoder {
                     marine.health = Long.parseLong(columnList.get(4));
                     marine.achievements = columnList.get(5);
                     marine.category = AstartesCategory.valueOf(columnList.get(6).toUpperCase());
-                    //marine.weaponType = Weapon.valueOf(columnList.get(7).toUpperCase());
+                    marine.weaponType = Weapon.valueOf(columnList.get(7).toUpperCase());
                     Chapter chapter = new Chapter();
                     chapter.setName(columnList.get(8));
                     chapter.setParentLegion(columnList.get(9));
