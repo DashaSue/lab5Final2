@@ -10,7 +10,8 @@ public class Main {
     public static void main(String[] args) {
         LinkedList<SpaceMarine> list = new LinkedList<>();
         creationDate = new Date();
-        Decoder.fillCollection("filecsv.csv"); // Decoder.fillCollection(Decoder.getFilePath());
+        Decoder.fillCollection("filecsv.csv");
+        // Decoder.fillCollection(Decoder.getFilePath()); //для переменной окружения
         System.out.println(Decoder.list);
 
         try {
@@ -21,7 +22,5 @@ public class Main {
                 CommandManager.ExecuteCommand(scanner.nextLine().split(" "), list);
             }
         }catch (NoSuchElementException ignored){}
-
-
     }
 }

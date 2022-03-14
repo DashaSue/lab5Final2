@@ -20,9 +20,9 @@ public class Decoder {
             System.out.println("Указанный файл не найден. Коллекция пустая.");
         else {
             try {
-                list = new LinkedList<SpaceMarine>();
+                list = new LinkedList<>();
                 // List<String> fileLines = Files.readAllLines(Paths.get(args));
-                List<String> fileLines = new LinkedList<>();
+                List<String> fileLines = new LinkedList<>(); //прикольный интерфейс
                 BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(args)));
                 String reader = buff.readLine();
                 while (reader != null) {
