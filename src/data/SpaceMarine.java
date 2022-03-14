@@ -26,8 +26,6 @@ public class SpaceMarine {
         this.chapter = chapter;
     }
 
-    //fvdkvod
-
     public long getId() {
         return id;
     }

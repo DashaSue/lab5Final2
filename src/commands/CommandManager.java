@@ -3,6 +3,7 @@ package commands;
 import data.SpaceMarine;
 
 import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -27,7 +28,7 @@ public class CommandManager {
     private boolean notPrintAdd = false;
     private String scriptFileName = "executeScript.csv";
     private boolean isScript = false;
-    private BufferedReader scriptBufferedReader;
+    private InputStreamReader scriptInputReader;
 
 
     public static void ExecuteCommand(String[] args, LinkedList<SpaceMarine> list) {
@@ -50,11 +51,11 @@ public class CommandManager {
         return scriptFileName;
     }
 
-    public BufferedReader getScriptBufferedReader() {
-        return scriptBufferedReader;
+    public InputStreamReader getScriptInputReader() {
+        return scriptInputReader;
     }
 
-    public void setScriptBufferedReader(BufferedReader scriptBufferedReader) {
-        this.scriptBufferedReader = scriptBufferedReader;
+    public void setScriptInputReader(InputStreamReader scriptInputReader) {
+        this.scriptInputReader = scriptInputReader;
     }
 }

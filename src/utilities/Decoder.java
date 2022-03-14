@@ -2,7 +2,10 @@ package utilities;
 
 import data.*;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -18,7 +21,14 @@ public class Decoder {
         else {
             try {
                 list = new LinkedList<SpaceMarine>();
-                List<String> fileLines = Files.readAllLines(Paths.get(args));
+                // List<String> fileLines = Files.readAllLines(Paths.get(args));
+                List<String> fileLines = new LinkedList<>();
+                BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(args)));
+                String reader = buff.readLine();
+                while (reader != null) {
+                    fileLines.add(reader);
+                    reader = buff.readLine();
+                }
                 for (String params : fileLines) {
                     String[] splitedText = params.split(": ");
                     ArrayList<String> columnList = new ArrayList<>();

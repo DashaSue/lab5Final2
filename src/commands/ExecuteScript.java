@@ -2,9 +2,7 @@ package commands;
 
 import data.SpaceMarine;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.HashSet;
 import java.util.LinkedList;
 
@@ -25,16 +23,17 @@ public class ExecuteScript extends CommandAbstract{
      */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
-        if (args.length != 1) System.out.println("Команда принимает лишь один аргумент");
+        if (args.length == 0) System.out.println("вы забыли ввести имя файла со скриптом");
+        else if (args.length > 1) System.out.println("неверный формат названия файла");
         else {
             commandManager.setScript(true);
             try {
                 String sfn = args[0];
-                commandManager.setScriptFileName("executeScript");
-                commandManager.setScriptBufferedReader(new BufferedReader(new FileReader(commandManager.getScriptFileName())));
+                commandManager.setScriptFileName(sfn);
+                commandManager.setScriptInputReader(new InputStreamReader(new FileInputStream(commandManager.getScriptFileName())));
                 String line = "";
                 while (true) {
-                    line = commandManager.getScriptBufferedReader().readLine();
+                    line = String.valueOf(commandManager.getScriptInputReader().read());
                     String[] nargs = line.split(" ");
                     if (nargs[0].equals("execute_script")) {
                         if (!scriptsNames.contains(nargs[1])) {
