@@ -22,6 +22,7 @@ public class CommandManager {
         commands.add(new RemoveFirst());
         commands.add(new RemoveById());
         commands.add(new RemoveAnyByHealth());
+        commands.add(new RemoveQreater());
     }
     public static HashSet<CommandAbstract> getCommands() {
         return commands;
