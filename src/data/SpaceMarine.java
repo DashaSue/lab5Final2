@@ -99,7 +99,7 @@ public class SpaceMarine {
 
     @Override
     public String toString() {
-        return "Космический десант{ " +
+        return "Космический корабль{ " +
                 "id: " + id +
                 ", имя: '" + name + '\'' +
                 ", " + "коодинаты: x = "+coordinates.getX() + ", y = "+coordinates.getY()+ ", "+

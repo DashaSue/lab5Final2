@@ -5,16 +5,16 @@ public class Chapter {
     private String parentLegion;
     private long marinesCount; //Значение поля должно быть больше 0, Максимальное значение поля: 1000
 
-    public Chapter(String name, String parentLegion) {
+    public Chapter() {
         this.name = name;
         this.parentLegion = parentLegion;
         this.marinesCount = marinesCount;
     }
     @Override
     public String toString() {
-        return "глава{" +
-                "имя=: '" + name + '\'' +
-                ", легион: '" + parentLegion + '\'' + ",количество морской флота: '" + marinesCount+
+        return "часть{" +
+                "имя: '" + name + '\'' +
+                ", легион: '" + parentLegion + '\'' + ",количество кораблей в части: " + marinesCount+
                 '}';
     }
     public void setName(String name) {
@@ -31,7 +31,7 @@ public class Chapter {
     public String getParentLegion(String parentLegion) {
         return parentLegion;
     }
-    public void setMarinesCount(){
+    public void setMarinesCount(Long marinesCount){
         this.marinesCount = marinesCount;
     }
 

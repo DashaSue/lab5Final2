@@ -52,7 +52,11 @@ public class Decoder {
                     marine.achievements = columnList.get(5);
                     marine.category = AstartesCategory.valueOf(columnList.get(6).toUpperCase());
                     marine.weaponType = Weapon.valueOf(columnList.get(7).toUpperCase());
-
+                    Chapter chapter = new Chapter();
+                    chapter.setName(columnList.get(8));
+                    chapter.setParentLegion(columnList.get(9));
+                    chapter.setMarinesCount(Long.parseLong(columnList.get(10)));
+                    marine.chapter = chapter;
 
                     list.add(marine);
                 }
