@@ -18,6 +18,10 @@ public class CommandManager {
         commands.add(new ExecuteScript());
         commands.add(new Clear());
         commands.add(new Show());
+        commands.add(new Exit());
+        commands.add(new RemoveFirst());
+        commands.add(new RemoveAnyByHealth());
+        //commands.add(new Save());
     }
     public static HashSet<CommandAbstract> getCommands() {
         return commands;
@@ -41,6 +45,12 @@ public class CommandManager {
                 exist = true;
             }
         if (!exist) System.out.println("Команда не найдена. Для просмотра доступных команд введите help");
+    }
+    public void setExist(boolean exist) {
+        this.exist = exist;
+    }
+    public boolean isExist() {
+        return exist;
     }
     //методы для скрипта
     public void setScript(boolean b) { isScript = b;}
