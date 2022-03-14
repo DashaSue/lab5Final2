@@ -106,7 +106,7 @@ public class SpaceMarine {
         return "Космический корабль{ " +
                 "id: " + id +
                 ", имя: '" + name + '\'' +
-                ", " + "коодинаты: x = "+coordinates.getX() + ", y = "+coordinates.getY()+ ", "+
+                ", " + "коодинаты: x = "+coordinates.getX() + ", y = "+coordinates.getY()+
                 ", дата создания: " + creationDate +
                 ", здоровье: " + health +
                 ", достижения: " + achievements +
