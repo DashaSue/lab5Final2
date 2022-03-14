@@ -10,6 +10,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import static utilities.FileReader.fileLines;
+
 public class Decoder {
 
     public static List<SpaceMarine> list;
@@ -23,13 +25,7 @@ public class Decoder {
             try {
                 list = new LinkedList<SpaceMarine>();
                 // List<String> fileLines = Files.readAllLines(Paths.get(args));
-                List<String> fileLines = new LinkedList<>(); //прикольный интерфейс
-                BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(args)));
-                String reader = buff.readLine();
-                while (reader != null) {
-                    fileLines.add(reader);
-                    reader = buff.readLine();
-                }
+                FileReader.fileReader(args);
                 for (String params : fileLines) {
                     String[] splitedText = params.split(": ");
                     ArrayList<String> columnList = new ArrayList<>();
@@ -62,7 +58,7 @@ public class Decoder {
                     list.add(marine);
                 }
                 System.out.println("Коллекция успешно заполнена.");
-            } catch (IOException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("Некоррректные данные. Коллекция пустая.");
             }
