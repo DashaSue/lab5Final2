@@ -1,9 +1,11 @@
 package commands;
 
+import com.sun.deploy.net.MessageHeader;
 import data.SpaceMarine;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -11,6 +13,7 @@ import java.util.LinkedList;
 public class CommandManager {
     private static HashSet<CommandAbstract> commands = new HashSet<>();
     private static CommandManager commandManager = new CommandManager();
+    protected static ArrayList historyList = new ArrayList();
 
     private CommandManager() {
         commands.add(new Help());
@@ -24,6 +27,7 @@ public class CommandManager {
         commands.add(new RemoveAnyByHealth());
         commands.add(new RemoveQreater());
         commands.add(new Save());
+        commands.add(new History());
     }
     public static HashSet<CommandAbstract> getCommands() {
         return commands;
@@ -36,7 +40,6 @@ public class CommandManager {
     private boolean isScript = false;
     private InputStreamReader scriptInputReader;
 
-
     public static void ExecuteCommand(String[] args, LinkedList<SpaceMarine> list) {
         String cmd = args[0].trim();//удаляет пробелы из начала и конца строки
         args = Arrays.copyOfRange(args, 1, args.length);
@@ -44,6 +47,7 @@ public class CommandManager {
         for (CommandAbstract command : commands)
             if (command.getName().equals(cmd)) {
                 command.execute(args, list, commandManager);
+                CommandManager.historyList.add(cmd);
                 exist = true;
             }
         if (!exist) System.out.println("Команда не найдена. Для просмотра доступных команд введите help");
