@@ -5,8 +5,8 @@ import data.SpaceMarine;
 import java.util.LinkedList;
 
 public class RemoveFirst extends CommandAbstract{
-    public void RemoveFirst(){
-        name = "remove first";
+    public RemoveFirst(){
+        name = "remove_first";
         help = "удаляет первый элемент коллекции";
     }
     @Override

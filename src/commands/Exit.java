@@ -5,7 +5,7 @@ import data.SpaceMarine;
 import java.util.LinkedList;
 
 public class Exit extends CommandAbstract{
-    public void Exit(){
+    public Exit(){
         name = "exit";
         help = "завершает программу (без сохранения в файл)";
     }

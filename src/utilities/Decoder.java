@@ -20,7 +20,7 @@ public class Decoder {
             System.out.println("Указанный файл не найден. Коллекция пустая.");
         else {
             try {
-                list = new LinkedList<>();
+                list = new LinkedList<SpaceMarine>();
                 // List<String> fileLines = Files.readAllLines(Paths.get(args));
                 List<String> fileLines = new LinkedList<>(); //прикольный интерфейс
                 BufferedReader buff = new BufferedReader(new InputStreamReader(new FileInputStream(args)));
