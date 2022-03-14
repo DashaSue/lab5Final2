@@ -48,6 +48,7 @@ public class CommandManager {
             if (command.getName().equals(cmd)) {
                 command.execute(args, list, commandManager);
                 CommandManager.historyList.add(cmd);
+                while (CommandManager.historyList.size() > 9) CommandManager.historyList.remove(0);
                 exist = true;
             }
         if (!exist) System.out.println("Команда не найдена. Для просмотра доступных команд введите help");
