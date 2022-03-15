@@ -31,12 +31,12 @@ public class ExecuteScript extends CommandAbstract {
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
         if (args.length == 0) System.out.println("вы забыли ввести имя файла со скриптом");
         else if (args.length > 1) System.out.println("неверный формат названия файла");
-        else { FileReader.fileReader(args[0]);
-            for (String s : fileLines){
+        else {
+            FileReader.fileReader(args[0]);
+            for (String s : fileLines) {
                 String[] command = s.split(" ");
                 CommandManager.ExecuteCommand(command, list);
             }
-
         }
     }
 }

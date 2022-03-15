@@ -13,8 +13,8 @@ public class Main {
     public static void main(String[] args) {
         LinkedList<SpaceMarine> list = new LinkedList<>();
         creationDate = new Date();
-        Decoder.fillCollection("filecsv.csv");
-        // Decoder.fillCollection(Decoder.getFilePath()); //для переменной окружения
+       // Decoder.fillCollection("filecsv.csv");
+        Decoder.fillCollection(Decoder.getFilePath()); //для переменной окружения
         System.out.println(Decoder.list);
 
         try {

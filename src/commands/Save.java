@@ -37,7 +37,7 @@ public class Save extends CommandAbstract {
                         '\'',
                         '/',
                         "\n");
-                for (SpaceMarine spaceMarine : list)
+                for (SpaceMarine spaceMarine : Decoder.list)
                 writer.writeNext(new String[]{spaceMarine.getName(), String.valueOf(spaceMarine.getCoordinates().getX()),
                         String.valueOf(spaceMarine.getCoordinates().getY()), String.valueOf(spaceMarine.getHealth()),
                         spaceMarine.getAchievements(), String.valueOf(spaceMarine.getCategory()),
