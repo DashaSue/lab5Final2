@@ -25,7 +25,7 @@ public class Decoder {
             try {
                 list = new LinkedList<SpaceMarine>();
                 // List<String> fileLines = Files.readAllLines(Paths.get(args));
-                FileReader.fileReader(args);
+                if (args!= "ввод с консоли") FileReader.fileReader(args);
                 for (String params : fileLines) {
                     String[] splitedText = params.split(": ");
                     ArrayList<String> columnList = new ArrayList<>();

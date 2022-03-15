@@ -28,6 +28,7 @@ public class CommandManager {
         commands.add(new RemoveQreater());
         commands.add(new Save());
         commands.add(new History());
+        commands.add(new Add());
     }
     public static HashSet<CommandAbstract> getCommands() {
         return commands;
