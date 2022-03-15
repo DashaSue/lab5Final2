@@ -5,6 +5,9 @@ import utilities.Decoder;
 
 import java.util.LinkedList;
 
+/**
+ * класс команды clear
+ */
 public class Clear extends CommandAbstract {
     public Clear() {
         name = "clear";

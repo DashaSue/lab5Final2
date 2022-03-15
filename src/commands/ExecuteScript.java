@@ -8,9 +8,12 @@ import java.util.HashSet;
 import java.util.LinkedList;
 
 import static utilities.FileReader.fileLines;
-
+/**
+ * Класс команды execute_script
+ */
 public class ExecuteScript extends CommandAbstract {
     HashSet<String> scriptsNames = new HashSet<>();
+
 
     public ExecuteScript() {
         name = "execute_script";
