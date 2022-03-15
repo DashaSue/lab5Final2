@@ -17,7 +17,7 @@ public class Add extends CommandAbstract{
         name = "add";
         help = "добавляет новый элемент в коллекцию";
     }
-
+//что
     /**
      * Добавляет новый элемент в коллекцию
      * @param args            аргументы, принимаемые командой
