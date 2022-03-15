@@ -1,11 +1,6 @@
 package utilities;
 
-import data.SpaceMarine;
-
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.LinkedList;
-import java.util.List;
+import data.*;
 import java.util.Scanner;
 
 import static utilities.FileReader.fileLines;
@@ -29,9 +24,11 @@ public class FileWriter {
             s=s+scanner.nextLine().trim()+": ";
             System.out.println("Введите достижения");
             s=s+scanner.nextLine().trim()+": ";
-            System.out.println("Введите категорию");
+            System.out.println("Выберите категорию:");
+            for (Enum e:AstartesCategory.values()) System.out.println(e);
             s=s+scanner.nextLine().trim()+": ";
             System.out.println("Введите тип оружия");
+            for(Enum e:Weapon.values()) System.out.println(e);
             s=s+scanner.nextLine().trim()+": ";
             System.out.println("Введите имя части");
             s=s+scanner.nextLine().trim()+": ";
