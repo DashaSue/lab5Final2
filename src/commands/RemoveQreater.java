@@ -9,7 +9,7 @@ import java.util.LinkedList;
     public class RemoveQreater extends CommandAbstract{
         public RemoveQreater(){
             name = "remove_qreater";
-            help = "удаляет из коллекции все элементы, превышающие заданный по id\n";
+            help = "удаляет из коллекции все элементы, превышающие заданный по id";
         }
         @Override
         public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager){
