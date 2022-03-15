@@ -6,12 +6,21 @@ import utilities.Decoder;
 
 import java.util.LinkedList;
 
+/**
+ * Класс команды remove_any_by_health
+ */
 public class RemoveAnyByHealth extends CommandAbstract {
     public RemoveAnyByHealth() {
         name = "remove_any_by_health";
-        help = "удаляет из коллекции один элемент, значение поля loyal которого эквивалентно заданному";
+        help = "удаляет из коллекции один элемент, значение поля health которого эквивалентно заданному";
     }
 
+    /**
+     * Удаляет из коллекции один элемент, значение поля health которого эквивалентно заданному
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager){
         if (args.length != 1) System.out.println("Неверный health");

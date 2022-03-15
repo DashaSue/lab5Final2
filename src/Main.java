@@ -4,6 +4,9 @@ import utilities.Decoder;
 
 import java.util.*;
 
+/**
+ * Класс Main
+ */
 public class Main {
     public static Date creationDate;
 

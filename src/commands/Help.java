@@ -4,13 +4,21 @@ import data.SpaceMarine;
 
 import java.util.LinkedList;
 
+/**
+ * Класс команды help
+ */
 public class Help extends CommandAbstract{
     public Help() {
         name = "help";
         help = "выводит справку по доступным командам";
     }
 
-
+    /**
+     * Выводит справку по командам, которые доступны
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
         if (args.length > 0) {

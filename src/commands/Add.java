@@ -9,12 +9,21 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Класс команды add
+ */
 public class Add extends CommandAbstract{
     public Add(){
         name = "add";
         help = "добавляет новый элемент в коллекцию";
     }
 
+    /**
+     * Добавляет новый элемент в коллекцию
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
         String a = "ввод с консоли";

@@ -12,11 +12,18 @@ import java.util.*;
 
 import static utilities.FileReader.fileLines;
 
+/**
+ * Класс типа Decoder
+ */
 public class Decoder {
 
     public static List<SpaceMarine> list;
     private static final String envPath = System.getenv("file");
 
+    /**
+     * Метод fillCollection, который заполняет коллекцию
+     * @param args
+     */
 
     public static void fillCollection(String args){
         if (args == null)
@@ -65,7 +72,9 @@ public class Decoder {
         }
     }
 
-    //Проверка является ли колонка частью предыдущей колонки
+    /**
+     * Проверка является ли колонка частью предыдущей колонки
+     */
     private static boolean IsColumnPart(String text) {
         String trimText = text.trim();
         //Если в тексте одна ковычка и текст на нее заканчиваеться значит это часть предыдущей колонки

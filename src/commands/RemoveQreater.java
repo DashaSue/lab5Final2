@@ -6,11 +6,21 @@ import utilities.Decoder;
 
 import java.util.LinkedList;
 
+/**
+ * Класс метода remove_qreater
+ */
     public class RemoveQreater extends CommandAbstract{
         public RemoveQreater(){
             name = "remove_qreater";
             help = "удаляет из коллекции все элементы, превышающие заданный по id";
         }
+
+    /**
+     * Удаляет из коллекции все элементы, превышающие заданный id
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
         @Override
         public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager){
             if (args.length != 1) System.out.println("Неверный id");

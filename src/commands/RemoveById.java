@@ -6,11 +6,21 @@ import utilities.Decoder;
 
 import java.util.LinkedList;
 
+/**
+ * Класс команды remove_by_id
+ */
 public class RemoveById extends CommandAbstract{
     public RemoveById(){
         name = "remove_by_id";
         help = "удаляет элемент с заданным id";
     }
+
+    /**
+     * Удаляет элемент с заданным id
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager){
         if (args.length != 1) System.out.println("Неверный id");

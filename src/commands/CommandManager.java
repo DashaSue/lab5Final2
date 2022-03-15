@@ -10,11 +10,17 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 
+/**
+ * Класс выбора команд
+ */
 public class CommandManager {
     private static HashSet<CommandAbstract> commands = new HashSet<>();
     private static CommandManager commandManager = new CommandManager();
     protected static ArrayList historyList = new ArrayList();
 
+    /**
+     * Конструктор, при вызове которого в коллекцию HashSet commands будут добавлены все доступные команды
+     */
     private CommandManager() {
         commands.add(new Help());
         commands.add(new Info());
@@ -30,6 +36,7 @@ public class CommandManager {
         commands.add(new History());
         commands.add(new Add());
     }
+
     public static HashSet<CommandAbstract> getCommands() {
         return commands;
     }
@@ -41,6 +48,12 @@ public class CommandManager {
     private boolean isScript = false;
     private InputStreamReader scriptInputReader;
 
+    /**
+     * Метод, который определяет, какую команду ввели
+     *
+     * @param args команда с её аргументами
+     * @param list коллекция, с которой работает пользователь
+     */
     public static void ExecuteCommand(String[] args, LinkedList<SpaceMarine> list) {
         String cmd = args[0].trim();//удаляет пробелы из начала и конца строки
         args = Arrays.copyOfRange(args, 1, args.length);
@@ -53,27 +66,5 @@ public class CommandManager {
                 exist = true;
             }
         if (!exist) System.out.println("Команда не найдена. Для просмотра доступных команд введите help");
-    }
-    public void setExist(boolean exist) {
-        this.exist = exist;
-    }
-    public boolean isExist() {
-        return exist;
-    }
-    //методы для скрипта
-    public void setScript(boolean b) { isScript = b;}
-
-    public void setScriptFileName(String sfn) {this.scriptFileName = sfn;}
-
-    public String getScriptFileName() {
-        return scriptFileName;
-    }
-
-    public InputStreamReader getScriptInputReader() {
-        return scriptInputReader;
-    }
-
-    public void setScriptInputReader(InputStreamReader scriptInputReader) {
-        this.scriptInputReader = scriptInputReader;
     }
 }

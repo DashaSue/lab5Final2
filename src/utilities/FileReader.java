@@ -7,9 +7,16 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Класс FileReader
+ */
 public class FileReader {
     public static List<String> fileLines = new LinkedList<>();
 
+    /**
+     * Метод, который считывает данные с файла
+     * @param args элементы коллекции
+     */
     public static void fileReader(String args) {
         if (args == null)
             System.out.println("Указанный файл не найден. Коллекция пустая.");

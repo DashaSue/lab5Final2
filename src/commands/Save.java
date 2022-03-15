@@ -10,12 +10,21 @@ import java.util.LinkedList;
 import com.opencsv.CSVWriter;
 import utilities.FileReader;
 
+/**
+ * Класс команды save
+ */
 public class Save extends CommandAbstract {
     public Save() {
         name = "save";
         help = "сохраняет коллекцию в файл";
     }
 
+    /**
+     * охраняет коллекцию в файл
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
         if (args.length > 0) System.out.println("Команда не принимает аргументы");

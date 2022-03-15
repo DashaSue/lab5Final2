@@ -5,6 +5,9 @@ import data.SpaceMarine;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
+/**
+ * Класс команды history
+ */
 public class History extends CommandAbstract {
 
     public History() {
@@ -12,6 +15,12 @@ public class History extends CommandAbstract {
         help = "выводит список последних 9 команд";
     }
 
+    /**
+     * Выводит список последних 9 команд без их аргументов
+     * @param args            аргументы, принимаемые командой
+     * @param list   коллекция, с которой работает пользователь
+     * @param commandManager объект класса CommandsManager
+     */
     @Override
     public void execute(String[] args, LinkedList<SpaceMarine> list, CommandManager commandManager) {
         try {

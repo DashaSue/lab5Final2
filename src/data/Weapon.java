@@ -1,5 +1,8 @@
 package data;
 
+/**
+ * перечисление типов оружия
+ */
 public enum Weapon {
     HEAVY_BOLTGUN,
     BOLT_RIFLE,
